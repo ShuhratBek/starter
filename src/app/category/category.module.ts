@@ -6,28 +6,26 @@ import { categoryRouting } from './category.routing';
 import { CategoryComponent } from './category.component';
 import { CategoryListComponent } from './category-list';
 import { CategoryListItemComponent } from './category-list-item';
-import { SubCategoryComponent } from './sub-category.component';
-import { SubCategoryListComponent } from './sub-category-list';
 import { CategoryService } from './category.service';
-import { SubCategoryListItemComponent } from './sub-category-list-item';
 
-import { CategoryDialog } from './category-dialog.conmponent';
+import { CategoryDialogComponent } from './category-dialog';
 
 @NgModule({
     declarations: [
         CategoryComponent,
         CategoryListComponent,
         CategoryListItemComponent,
-        SubCategoryComponent,
-        SubCategoryListComponent,
-        SubCategoryListItemComponent,
-        CategoryDialog
+        CategoryDialogComponent
     ],
     imports: [
         categoryRouting,
         SharedModule
     ],
-    providers: [CategoryService, CategoryDialog]
+    providers: [CategoryService],
+    entryComponents: [
+        CategoryComponent,
+        CategoryDialogComponent
+    ]
 })
 
 export class CategoryModule {

@@ -18,13 +18,13 @@ export class CategoryService {
         return Promise.resolve(CATEGORIES);
     //     return Rx.Observable.from(CATEGORIES);
     }
-    //
-    getCategory(id: number): Promise<Category[]> {
-        return this.getCategories()
-            .then(categories =>
-                _.find(categories, _.flow(
-                    _.property('items'),
-                    _.partialRight(_.some, { id: id })
-                )));
-    }
+
+    // getCategory(id: number): Promise<Category[]> {
+    //     return this.getCategories()
+    //         .then(categories =>
+    //             _.find(categories, _.flow(
+    //                 _.property('items'),
+    //                 _.partialRight(_.some, { id: id })
+    //             )));
+    // }
 }

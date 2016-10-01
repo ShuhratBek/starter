@@ -1,18 +1,17 @@
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { Category } from './category';
 import { CategoryService } from './category.service';
-import { CategoryDialog } from './category-dialog.conmponent';
+import { CategoryDialogComponent } from './category-dialog';
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
 
 @Component({
     selector: 'category',
-    template: require('./category.component.html'),
-    providers: [CategoryDialog]
+    template: require('./category.component.html')
 })
 
 export class CategoryComponent implements OnInit {
     categories: Array<Category>;
-    dialogRef: MdDialogRef<CategoryDialog>;
+    dialogRef: MdDialogRef<CategoryDialogComponent>;
     lastCloseResult: string;
 
     constructor(
@@ -34,11 +33,12 @@ export class CategoryComponent implements OnInit {
         let config = new MdDialogConfig();
         config.viewContainerRef = this.viewContainerRef;
 
-        this.dialogRef = this.dialog.open(CategoryDialog, config);
+        this.dialogRef = this.dialog.open(CategoryDialogComponent, config);
 
         this.dialogRef.afterClosed().subscribe(result => {
             this.lastCloseResult = result;
             this.dialogRef = null;
         });
     }
+
 }

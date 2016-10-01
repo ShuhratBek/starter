@@ -1,0 +1,11 @@
+<md-card-title>Добавить</md-card-title>
+<md-card-content>
+    <md-input placeholder="amount" align="end">
+        <span md-prefix>$&nbsp;</span>
+        <span md-suffix>.00</span>
+    </md-input>
+</md-card-content>
+<md-card-actions align="end">
+    <button md-button type="button" (click)="dialogRef.close(howMuch.value)">Сохранить</button>
+</md-card-actions>
+

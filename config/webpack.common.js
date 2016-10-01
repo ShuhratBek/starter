@@ -25,6 +25,11 @@ module.exports = {
                 loader: 'html'
             },
             {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                loaders: ['raw-loader', 'sass-loader'] // sass-loader not scss-loader
+            },
+            {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
                 loader: 'file?name=assets/[name].[hash].[ext]'
             },

@@ -1,9 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 
-import '../styles.css';
-import '../angular-material.layout-attributes.css';
-import '@angular/material/core/theming/prebuilt/indigo-pink.css';
-
 import { Menu } from './menu';
 import { MenuService } from './menu.service';
 
