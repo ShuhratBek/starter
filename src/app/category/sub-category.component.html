@@ -1,0 +1,18 @@
+<div layout="row" layout-align="center center">
+    <md-card flex="80">
+        <div>{{categories|json}}</div>
+        <div *ngFor="let category of categories">
+            <md-card-title>
+                <button md-icon-button (click)="back()">
+                    <md-icon>arrow_back</md-icon>
+                </button>
+                {{ category.name }}
+            </md-card-title>
+            <md-nav-list md-card-image>
+                <md-list-item *ngFor="let item of category.items" [routerLink]="'/category/' + [item.id]">
+                    {{ item.name }}
+                </md-list-item>
+            </md-nav-list>
+        </div>
+    </md-card>
+</div>

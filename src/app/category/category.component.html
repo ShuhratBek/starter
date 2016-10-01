@@ -1,0 +1,20 @@
+<div layout="row" layout-align="center center">
+    <md-card flex="80">
+        <md-card-title>Category</md-card-title>
+        <md-nav-list md-card-image>
+            <md-list-item *ngFor="let item of categories" [routerLink]="'/category/' + [item.id]">
+                <span flex>{{ item.name }}</span>
+                <button md-icon-button>
+                    <md-icon>create</md-icon>
+                </button>
+                <button md-icon-button>
+                    <md-icon>delete</md-icon>
+                </button>
+            </md-list-item>
+        </md-nav-list>
+    </md-card>
+</div>
+<button md-fab class="md-fab-bottom-right">
+    <md-icon>add</md-icon>
+</button>
+<button (click)="open()" [disabled]="dialogRef">Open dialog</button>

@@ -1,0 +1,13 @@
+<md-sidenav-layout fullscreen>
+    <md-sidenav #start mode="push" [opened]="navbar.sidebarState" class="app-sidenav" (close)="navbar.menu()">
+        <md-nav-list>
+            <md-list-item *ngFor="let menu of menus" [routerLink]="[menu.link]" (click)="start.close()">
+                {{ menu.title }}
+            </md-list-item>
+        </md-nav-list>
+    </md-sidenav>
+    <nav-bar #navbar></nav-bar>
+    <div class="app-content">
+        <router-outlet></router-outlet>
+    </div>
+</md-sidenav-layout>

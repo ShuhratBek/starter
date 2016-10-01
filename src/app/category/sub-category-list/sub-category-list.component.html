@@ -1,0 +1,4 @@
+<md-nav-list md-card-image>
+    <sub-category-list-item *ngIf="items" [items]="items"></sub-category-list-item>
+    <div>{{ items | json }}</div>
+</md-nav-list>
