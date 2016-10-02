@@ -3,6 +3,7 @@ import { Category } from './category';
 import { CategoryService } from './category.service';
 import { CategoryDialogComponent } from './category-dialog';
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
+import * as _ from 'lodash';
 
 @Component({
     selector: 'category',
@@ -12,7 +13,7 @@ import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
 export class CategoryComponent implements OnInit {
     categories: Array<Category>;
     dialogRef: MdDialogRef<CategoryDialogComponent>;
-    lastCloseResult: string;
+    searchOpen: boolean = false;
 
     constructor(
         private categoryService: CategoryService,
@@ -36,9 +37,19 @@ export class CategoryComponent implements OnInit {
         this.dialogRef = this.dialog.open(CategoryDialogComponent, config);
 
         this.dialogRef.afterClosed().subscribe(result => {
-            this.lastCloseResult = result;
+            if(!_.isEmpty(result)) {
+                this.categories.push({
+                    id: 5,
+                    name: result,
+                    icon: '',
+                    items: []
+                });
+            }
             this.dialogRef = null;
         });
     }
 
+    toggleSearch(): void {
+        this.searchOpen = !this.searchOpen;
+    }
 }

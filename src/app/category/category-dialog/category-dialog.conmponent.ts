@@ -1,4 +1,4 @@
-import { Component, ViewContainerRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { MdDialogRef} from '@angular/material';
 
 @Component({
@@ -6,5 +6,11 @@ import { MdDialogRef} from '@angular/material';
     template: require('./category-dialog.component.html')
 })
 export class CategoryDialogComponent {
-    constructor(public dialogRef: MdDialogRef<CategoryDialogComponent>) { }
+    category: string;
+
+    constructor(public dialogRef: MdDialogRef<CategoryDialogComponent>) {}
+
+    save() {
+        this.dialogRef.close(this.category);
+    }
 }

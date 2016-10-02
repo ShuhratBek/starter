@@ -1,8 +1,23 @@
 <div layout="row" layout-align="center center">
     <md-card flex="80">
-        <md-card-title>Category</md-card-title>
+        <md-toolbar md-card-image *ngIf="!searchOpen">
+            <span>Category</span>
+            <span flex></span>
+            <button md-icon-button (click)="open()" [disabled]="dialogRef">
+                <md-icon>add</md-icon>
+            </button>
+            <button md-icon-button (click)="toggleSearch()">
+                <md-icon>search</md-icon>
+            </button>
+        </md-toolbar>
+        <md-toolbar md-card-image *ngIf="searchOpen">
+            <md-input placeholder="Поиск" [(ngModel)]="search" flex></md-input>
+            <button md-icon-button (click)="toggleSearch()">
+                <md-icon>cancel</md-icon>
+            </button>
+        </md-toolbar>
         <md-nav-list md-card-image>
-            <md-list-item *ngFor="let item of categories" [routerLink]="'/category/' + [item.id]" (mouseover)="item.hover=true" (mouseleave)="item.hover=false">
+            <md-list-item *ngFor="let item of categories" (mouseover)="item.hover=true" (mouseleave)="item.hover=false">
                 <span flex>{{ item.name }}</span>
                 <button md-icon-button *ngIf="item.hover">
                     <md-icon>create</md-icon>
@@ -13,7 +28,7 @@
             </md-list-item>
         </md-nav-list>
     </md-card>
+    <!--<button md-fab class="md-fab-bottom-right" (click)="open()" [disabled]="dialogRef">-->
+        <!--<md-icon>add</md-icon>-->
+    <!--</button>-->
 </div>
-<button md-fab class="md-fab-bottom-right" (click)="open()" [disabled]="dialogRef">
-    <md-icon>add</md-icon>
-</button>

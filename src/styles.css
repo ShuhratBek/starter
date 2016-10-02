@@ -18,4 +18,6 @@ body {
     bottom: 20px;
     left: auto;
     position: absolute!important;
+    transform: scale(0);
+    transition: transform 0.3s linear;
 }
