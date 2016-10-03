@@ -69,8 +69,8 @@
   "author": "shuhratbek",
   "license": "MIT",
   "engines": {
-    "node": "^5.x.x",
-    "npm": "^3.9.x"
+    "node": "^6.x.x",
+    "npm": "^3.10.x"
   },
   "private": true
 }
