@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Dish } from './dish';
+import { Item } from '../item/item';
 import { Tray } from './tray';
 import { TRAY } from './mock-tray';
 
@@ -18,7 +18,7 @@ export class TrayService {
         return Promise.resolve(TRAY);
     }
 
-    removeDish(dish: Dish): boolean {
+    removeDish(dish: Item): boolean {
         return false;
     }
 

@@ -1,10 +1,10 @@
-import { Dish } from './dish'
+import { Item } from '../item/item'
 import { Company } from '../item/item'
 
 export class Tray {
     id: number;
     company: Company;
-    dishes: Array<Dish>;
+    dishes: Array<Item>;
     status: string;
     totalPrice: number;
 }

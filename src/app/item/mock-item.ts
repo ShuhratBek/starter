@@ -6,7 +6,8 @@ export let Items: Array<Item> = [
         name: 'Салат Хакеры',
         image: 'http://paragrams.com/wp-content/uploads/2013/09/Grecheskij-salat.jpg',
         price: 1.84,
-        description: 'салями к/в,морковь пряная,огурец св.,шампиньоны ,майонез,зелень',
+        description: 'вкусненский салат',
+        ingredients: 'салями к/в,морковь пряная,огурец св.,шампиньоны ,майонез,зелень',
         options: 'dfdfd',
         category: {
             id: 1,
@@ -28,7 +29,8 @@ export let Items: Array<Item> = [
         name: 'Салат Хакеры',
         image: 'http://paragrams.com/wp-content/uploads/2013/09/Grecheskij-salat.jpg',
         price: 1.84,
-        description: 'салями к/в,морковь пряная,огурец св.,шампиньоны ,майонез,зелень',
+        description: 'вкусненский салат',
+        ingredients: 'салями к/в,морковь пряная,огурец св.,шампиньоны ,майонез,зелень',
         options: 'dfdfd',
         category: {
             id: 1,
@@ -50,7 +52,8 @@ export let Items: Array<Item> = [
         name: 'Салат Хакеры',
         image: 'http://paragrams.com/wp-content/uploads/2013/09/Grecheskij-salat.jpg',
         price: 1.84,
-        description: 'салями к/в,морковь пряная,огурец св.,шампиньоны ,майонез,зелень',
+        description: 'вкусненский салат',
+        ingredients: 'салями к/в,морковь пряная,огурец св.,шампиньоны ,майонез,зелень',
         options: 'dfdfd',
         category: {
             id: 1,
@@ -72,7 +75,8 @@ export let Items: Array<Item> = [
         name: 'Салат Хакеры',
         image: 'http://paragrams.com/wp-content/uploads/2013/09/Grecheskij-salat.jpg',
         price: 1.84,
-        description: 'салями к/в,морковь пряная,огурец св.,шампиньоны ,майонез,зелень',
+        description: 'вкусненский салат',
+        ingredients: 'салями к/в,морковь пряная,огурец св.,шампиньоны ,майонез,зелень',
         options: 'dfdfd',
         category: {
             id: 1,
@@ -94,7 +98,8 @@ export let Items: Array<Item> = [
         name: 'Салат Хакеры',
         image: 'http://paragrams.com/wp-content/uploads/2013/09/Grecheskij-salat.jpg',
         price: 1.84,
-        description: 'салями к/в,морковь пряная,огурец св.,шампиньоны ,майонез,зелень',
+        description: 'вкусненский салат',
+        ingredients: 'салями к/в,морковь пряная,огурец св.,шампиньоны ,майонез,зелень',
         options: 'dfdfd',
         category: {
             id: 1,
@@ -116,7 +121,8 @@ export let Items: Array<Item> = [
         name: 'Салат Хакеры',
         image: 'http://paragrams.com/wp-content/uploads/2013/09/Grecheskij-salat.jpg',
         price: 1.84,
-        description: 'салями к/в,морковь пряная,огурец св.,шампиньоны ,майонез,зелень',
+        description: 'вкусненский салат',
+        ingredients: 'салями к/в,морковь пряная,огурец св.,шампиньоны ,майонез,зелень',
         options: 'dfdfd',
         category: {
             id: 1,
