@@ -1,0 +1,9 @@
+<h3>Меню</h3>
+<md-list>
+    <md-list-item *ngFor="let category of categories">
+        <p>
+            {{category.name}}
+            <editable-category [categoryId]="category.id"></editable-category>
+        </p>
+    </md-list-item>
+</md-list>
