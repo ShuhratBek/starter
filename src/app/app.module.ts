@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
-import '@angular/material/core/theming/prebuilt/indigo-pink.css';
+import '@angular/material/core/theming/prebuilt/deeppurple-amber.css';
 import './app-theme.scss';
 import '../styles.css';
 import '../angular-material.layout-attributes.css';
