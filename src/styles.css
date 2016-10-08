@@ -9,7 +9,7 @@ body {
 
 .app-sidenav {
     min-width: 100px;
-    width: 15%;
+    width: 20%;
 }
 
 .md-fab-bottom-right {
@@ -20,4 +20,11 @@ body {
     position: absolute!important;
     transform: scale(0);
     transition: transform 0.3s linear;
+}
+
+@media (min-width: 375px) and (max-width: 667px) {
+    .app-sidenav {
+        min-width: 100px;
+        width: 100%;
+    }
 }

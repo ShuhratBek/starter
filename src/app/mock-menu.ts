@@ -2,7 +2,7 @@ import { Menu } from './menu';
 
 export const MENUS: Menu[] = [
     {
-        title: 'Категории',
+        title: 'Заказ',
         link: '',
         icon: ''
     },

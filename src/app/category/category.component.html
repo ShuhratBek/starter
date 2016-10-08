@@ -1,14 +1,8 @@
 <div layout="row" layout-align="center center">
     <md-card flex="80">
         <md-toolbar md-card-image *ngIf="!searchOpen">
-            <span>Category</span>
+            <span>Меню</span>
             <span flex></span>
-            <button md-icon-button (click)="open()" [disabled]="dialogRef">
-                <md-icon>add</md-icon>
-            </button>
-            <button md-icon-button (click)="toggleSearch()">
-                <md-icon>search</md-icon>
-            </button>
         </md-toolbar>
         <md-toolbar md-card-image *ngIf="searchOpen">
             <md-input placeholder="Поиск" [(ngModel)]="search" flex></md-input>
@@ -16,19 +10,23 @@
                 <md-icon>cancel</md-icon>
             </button>
         </md-toolbar>
-        <md-nav-list md-card-image>
-            <md-list-item *ngFor="let item of categories" (mouseover)="item.hover=true" (mouseleave)="item.hover=false">
-                <span flex>{{ item.name }}</span>
-                <button md-icon-button *ngIf="item.hover">
-                    <md-icon>create</md-icon>
-                </button>
-                <button md-icon-button *ngIf="item.hover">
-                    <md-icon>delete</md-icon>
-                </button>
-            </md-list-item>
-        </md-nav-list>
+        <div *ngFor="let category of categories">
+            <md-toolbar md-card-image>
+                <span>{{ category.name }}</span>
+            </md-toolbar>
+            <md-nav-list md-card-image>
+                <md-list-item *ngFor="let item of category.items" (mouseover)="item.hover=true"
+                              (mouseleave)="item.hover=false">
+                    <span flex [style.backgroundColor]="item.choosen ? 'grey' : 'white'">{{ item.name }}
+                        </span>
+                    <span *ngIf="item.hover">
+                            <button md-icon-button (click)="item.choosen=!this.choosen" [disabled]="dialogRef">
+                                <md-icon>add</md-icon>
+                            </button>
+                        </span>
+
+                </md-list-item>
+            </md-nav-list>
+        </div>
     </md-card>
-    <!--<button md-fab class="md-fab-bottom-right" (click)="open()" [disabled]="dialogRef">-->
-        <!--<md-icon>add</md-icon>-->
-    <!--</button>-->
 </div>
