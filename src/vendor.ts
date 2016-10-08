@@ -7,5 +7,3 @@ import '@angular/router';
 import '@angular/http';
 
 import 'rxjs';
-
-import '@angular2-material/core';

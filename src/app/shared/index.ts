@@ -1,2 +1,2 @@
-export * from './shaerd.module';
+export * from './shared.module';
 export * from './values.pipe';
