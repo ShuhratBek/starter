@@ -19,14 +19,14 @@
         Filter
     </md-card>
 </div>
-<div layout="row" layout-wrap>
-    <div *ngFor="let item of items" flex="25" layout-padding>
+<div layout="row" layout-wrap *ngIf="items">
+    <div *ngFor="let item of items | searchFilter:search" flex="25" layout-padding>
         <md-card>
             <md-card-header>
                 <img md-card-avatar [src]="item.company.image">
                 <div flex>
                     <md-card-title>{{ item.company.name }}</md-card-title>
-                    <md-card-subtitle>Header subtitle</md-card-subtitle>
+                    <md-card-subtitle>{{ item.category.name }}</md-card-subtitle>
                 </div>
                 <button md-icon-button (click)="item.favorite = !item.favorite">
                     <md-icon *ngIf="item.favorite">favorite</md-icon>
@@ -34,16 +34,17 @@
                 </button>
             </md-card-header>
             <img md-card-image [src]="item.image" class="img">
-            <md-card-subtitle>{{ item.category.name }}</md-card-subtitle>
+            <div class="order">
+                <button md-fab class="md-fab-bottom-right">
+                    <md-icon>add_shopping_cart</md-icon>
+                </button>
+            </div>
+                <md-card-subtitle>{{ item.price }} руб.</md-card-subtitle>
             <md-card-title>{{ item.name }}</md-card-title>
             <md-card-content>
                 <span>{{ item.weight }}г</span>
-                <p>{{ item.description }}</p>
+                <p>{{ item.ingredients }}</p>
             </md-card-content>
-            <md-card-actions>
-                <button md-button>Заказать</button>
-                <button md-button>Like</button>
-            </md-card-actions>
         </md-card>
     </div>
 </div>

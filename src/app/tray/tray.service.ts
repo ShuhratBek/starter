@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Dish } from './dish';
-import { DISHES } from './mock-dishes';
-import * as _ from 'lodash';
+import { Item } from '../item/item';
+import { Tray } from './tray';
+import { TRAY } from './mock-tray';
 
 @Injectable()
 export class TrayService {
@@ -14,12 +14,11 @@ export class TrayService {
         //     this.dataObserver.next(DISHES);
     }
 
-    getDishes(): Promise<Dish[]> {
-        return Promise.resolve(DISHES);
-        //     return Rx.Observable.from(DISHES);
+    getTray(): Promise<Tray> {
+        return Promise.resolve(TRAY);
     }
 
-    removeDish(dish: Dish): boolean {
+    removeDish(dish: Item): boolean {
         return false;
     }
 

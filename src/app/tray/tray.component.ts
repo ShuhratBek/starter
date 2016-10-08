@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TrayService } from './tray.service'
-import { Dish } from './dish'
-import * as _ from 'lodash';
+import { Tray } from './tray'
 
 @Component({
     selector: 'tray',
@@ -9,8 +8,7 @@ import * as _ from 'lodash';
 })
 
 export class TrayComponent {
-    dishes: Array<Dish>;
-    totalPrice: number;
+    tray: Tray;
 
     constructor(
         private trayService: TrayService,
@@ -18,17 +16,12 @@ export class TrayComponent {
 
     }
 
-    getDishes(): Promise<Dish[]> {
-        return this.trayService.getDishes()
-            .then(dishes => this.dishes = dishes);
-    }
-
-    getTotalPrice(): void {
-        this.totalPrice = _.sumBy(this.dishes, d => d.price)
+    getTray(): void {
+        this.trayService.getTray()
+            .then((tray: Tray) => this.tray = tray);
     }
 
     ngOnInit(): void {
-        this.getDishes()
-            .then(() => this.getTotalPrice());
+        this.getTray();
     }
 }
