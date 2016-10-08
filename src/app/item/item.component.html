@@ -16,15 +16,14 @@
         </button>
     </md-toolbar>
     <md-card *ngIf="filterOpen">
-        <button md-icon-button [md-menu-trigger-for]="menu">
-            <md-icon>more_vert</md-icon>
-        </button>
-        <md-menu #menu="mdMenu">
-            <button md-menu-item> Refresh </button>
-            <button md-menu-item> Settings </button>
-            <button md-menu-item> Help </button>
-            <button md-menu-item disabled> Sign Out </button>
-        </md-menu>
+        <select [(ngModel)]="selectedCompanyId" *ngIf="companies">
+            <option disabled selected value="0">Заведение</option>
+            <option *ngFor="let company of companies" value="{{ company.id }}">{{ company.name }}</option>
+        </select>
+        <select [(ngModel)]="selectedCategoryId" *ngIf="categories">
+            <option disabled selected value="0">Категория</option>
+            <option *ngFor="let category of categories" value="{{ category.id }}">{{ category.name }}</option>
+        </select>
     </md-card>
 </div>
 <div layout="row" layout-wrap *ngIf="items">
