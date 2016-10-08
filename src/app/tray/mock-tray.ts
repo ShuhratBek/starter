@@ -1,4 +1,7 @@
 import { Tray } from './tray';
+import { Item } from '../item/item';
+import { Items } from '../item/mock-item';
+import * as _ from 'lodash'
 
 export let TRAY: Tray = {
     id: 1,
@@ -7,22 +10,7 @@ export let TRAY: Tray = {
         name: 'Браво',
         image: ''
     },
-    dishes: [
-        {
-            id: 1,
-            name: 'БОРШЧ',
-            icon: '',
-            ingredients: 'с капусткой но не красный',
-            price: 1.23
-        },
-        {
-            id: 2,
-            name: 'САЛАТ',
-            icon: '',
-            ingredients: 'вкусный, с ананасами',
-            price: 45.67
-        }
-    ],
+    dishes: Items,
     status: 'PENDING',
-    totalPrice: 123
+    totalPrice: _.sumBy(Items, i => i.price)
 };

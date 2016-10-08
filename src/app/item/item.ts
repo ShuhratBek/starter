@@ -11,6 +11,7 @@ export class Item {
     image: string;
     price: number;
     description: string;
+    ingredients: string;
     options: string;
     category: Category;
     company: Company;
