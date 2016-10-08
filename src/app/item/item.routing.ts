@@ -3,11 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ItemComponent } from './item.component';
 
-const categoryRoutes: Routes = [
+const itemRoutes: Routes = [
     {
         path: 'item',
         component: ItemComponent
     }
 ];
 
-export const itemRouting: ModuleWithProviders = RouterModule.forChild(categoryRoutes);
+export const itemRouting: ModuleWithProviders = RouterModule.forChild(itemRoutes);

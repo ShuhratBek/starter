@@ -14,6 +14,7 @@ import { routing, appRoutingProviders } from './app.routing';
 import { SharedModule } from './shared';
 import { CategoryModule } from './category';
 import { ItemModule } from './item';
+import { TrayModule } from './tray';
 import { UserComponent } from './user/user.component';
 import { NavbarComponent } from './navbar';
 
@@ -31,7 +32,8 @@ import { NavbarComponent } from './navbar';
         routing,
         SharedModule,
         CategoryModule,
-        ItemModule
+        ItemModule,
+        TrayModule
     ],
     providers: [
         appRoutingProviders,

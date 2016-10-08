@@ -12,6 +12,11 @@ export const MENUS: Menu[] = [
         icon: ''
     },
     {
+        title: 'Корзина',
+        link: 'tray',
+        icon: ''
+    },
+    {
         title: 'Пользователи',
         link: 'user',
         icon: ''
