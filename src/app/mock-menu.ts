@@ -7,6 +7,11 @@ export const MENUS: Menu[] = [
         icon: ''
     },
     {
+        title: 'Еда',
+        link: 'item',
+        icon: ''
+    },
+    {
         title: 'Пользователи',
         link: 'user',
         icon: ''

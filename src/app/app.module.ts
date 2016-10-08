@@ -13,6 +13,7 @@ import { AppService } from './app.service';
 import { routing, appRoutingProviders } from './app.routing';
 import { SharedModule } from './shared';
 import { CategoryModule } from './category';
+import { ItemModule } from './item';
 import { UserComponent } from './user/user.component';
 import { NavbarComponent } from './navbar';
 
@@ -29,7 +30,8 @@ import { NavbarComponent } from './navbar';
         JsonpModule,
         routing,
         SharedModule,
-        CategoryModule
+        CategoryModule,
+        ItemModule
     ],
     providers: [
         appRoutingProviders,

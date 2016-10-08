@@ -6,6 +6,10 @@ export const MENUS: Menu[] = [
         link: ''
     },
     {
+        title: 'Item',
+        link: 'item'
+    },
+    {
         title: 'Users',
         link: 'user'
     }
