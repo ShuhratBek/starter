@@ -36,6 +36,9 @@ export class ItemComponent implements OnInit {
     }
 
     toggleSearch(): void {
+        if(this.searchOpen){
+            this.search = '';
+        }
         this.searchOpen = !this.searchOpen;
     }
 

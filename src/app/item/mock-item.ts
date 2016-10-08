@@ -3,7 +3,7 @@ import { Item } from './item';
 export let Items: Array<Item> = [
     {
         id: 1,
-        name: 'Салат Хакеры',
+        name: 'Салат Хакеры1',
         image: 'http://paragrams.com/wp-content/uploads/2013/09/Grecheskij-salat.jpg',
         price: 1.84,
         description: 'вкусненский салат',
@@ -26,7 +26,7 @@ export let Items: Array<Item> = [
 
     {
         id: 1,
-        name: 'Салат Хакеры',
+        name: 'Салат Хакеры2',
         image: 'http://paragrams.com/wp-content/uploads/2013/09/Grecheskij-salat.jpg',
         price: 1.84,
         description: 'вкусненский салат',
@@ -49,7 +49,7 @@ export let Items: Array<Item> = [
 
     {
         id: 1,
-        name: 'Салат Хакеры',
+        name: 'Салат Хакеры3',
         image: 'http://paragrams.com/wp-content/uploads/2013/09/Grecheskij-salat.jpg',
         price: 1.84,
         description: 'вкусненский салат',
@@ -72,7 +72,7 @@ export let Items: Array<Item> = [
 
     {
         id: 1,
-        name: 'Салат Хакеры',
+        name: 'Салат Хакеры3',
         image: 'http://paragrams.com/wp-content/uploads/2013/09/Grecheskij-salat.jpg',
         price: 1.84,
         description: 'вкусненский салат',
