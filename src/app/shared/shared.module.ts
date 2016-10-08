@@ -3,12 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { MaterialModule } from '@angular/material';
-import { ValuesPipe } from './values.pipe';
 
 @NgModule({
-    declarations: [
-        ValuesPipe
-    ],
     imports: [
         CommonModule,
         FormsModule,
@@ -17,8 +13,7 @@ import { ValuesPipe } from './values.pipe';
     exports: [
         CommonModule,
         FormsModule,
-        MaterialModule,
-        ValuesPipe
+        MaterialModule
     ]
 })
 export class SharedModule {}

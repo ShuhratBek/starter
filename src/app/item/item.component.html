@@ -10,7 +10,7 @@
         </button>
     </md-toolbar>
     <md-toolbar *ngIf="searchOpen">
-        <md-input placeholder="Поиск" [(ngModel)]="search" flex></md-input>
+        <md-input placeholder="Поиск" [(ngModel)]="searchItem" flex></md-input>
         <button md-icon-button (click)="toggleSearch()">
             <md-icon>cancel</md-icon>
         </button>
@@ -20,7 +20,7 @@
     </md-card>
 </div>
 <div layout="row" layout-wrap>
-    <div *ngFor="let item of items" flex="25" layout-padding>
+    <div *ngFor="let item of (items)" flex="25" layout-padding>
         <md-card>
             <md-card-header>
                 <img md-card-avatar [src]="item.company.image">
@@ -35,7 +35,7 @@
             </md-card-header>
             <img md-card-image [src]="item.image" class="img">
             <div class="order">
-                <button md-fab class="md-fab-bottom-right">
+                <button md-fab class="md-fab-bottom-right" (click)="open()">
                     <md-icon>add_shopping_cart</md-icon>
                 </button>
             </div>

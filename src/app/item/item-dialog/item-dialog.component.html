@@ -1,0 +1,15 @@
+<md-card-title>
+    <md-toolbar md-card-image>
+        <span>Выбрать</span>
+        <span flex></span>
+    </md-toolbar>
+</md-card-title>
+<md-card-content layout="column">
+    <md-checkbox [checked]="false">Опция 1</md-checkbox>
+    <md-checkbox [checked]="false">Опция 2</md-checkbox>
+    <md-input placeholder="Предпочтения" [(ngModel)]="item"></md-input>
+</md-card-content>
+<md-card-actions align="end">
+    <button md-button type="button" (click)="save()">Добавить в корзину</button>
+</md-card-actions>
+

@@ -1,1 +1,1 @@
-export * from './category-dialog.conmponent';
+export * from './category-dialog.component';

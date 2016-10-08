@@ -6,9 +6,12 @@ import { itemRouting } from './item.routing';
 import { ItemComponent } from './item.component';
 import { ItemService } from './item.service';
 
+import { ItemDialogComponent } from './item-dialog';
+
 @NgModule({
     declarations: [
-        ItemComponent
+        ItemComponent,
+        ItemDialogComponent
     ],
     imports: [
         itemRouting,
@@ -16,7 +19,8 @@ import { ItemService } from './item.service';
     ],
     providers: [ItemService],
     entryComponents: [
-        ItemComponent
+        ItemComponent,
+        ItemDialogComponent
     ]
 })
 

@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
+import { NgModel } from '@angular/forms';
+import { ItemDialogComponent } from './item-dialog';
 import { Item } from './item';
 import { ItemService } from './item.service';
 import * as _ from 'lodash';
+import * as Rx from 'rxjs';
+import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
 
 @Component({
     selector: 'item',
@@ -11,11 +15,15 @@ import * as _ from 'lodash';
 
 export class ItemComponent implements OnInit {
     items: Array<Item>;
-    search: string = '';
+    searchItem: string = '';
     searchOpen: boolean = false;
     filterOpen: boolean = false;
+    dialogRef: MdDialogRef<ItemDialogComponent>;
+
     constructor(
-        private itemService: ItemService
+        private itemService: ItemService,
+        public dialog: MdDialog,
+        public viewContainerRef: ViewContainerRef
     ) {
     }
 
@@ -33,5 +41,14 @@ export class ItemComponent implements OnInit {
 
     toggleFilter(): void {
         this.filterOpen = !this.filterOpen;
+    }
+
+    open() {
+        let config = new MdDialogConfig();
+        config.viewContainerRef = this.viewContainerRef;
+
+        this.dialogRef = this.dialog.open(ItemDialogComponent, config);
+
+        this.dialogRef.afterClosed().subscribe(result => {});
     }
 }
