@@ -5,8 +5,14 @@
     </md-toolbar>
 </md-card-title>
 <md-card-content layout="column">
-    <md-checkbox [checked]="false">Опция 1</md-checkbox>
-    <md-checkbox [checked]="false">Опция 2</md-checkbox>
+    <md-list>
+        <md-list-item>
+            <md-checkbox [checked]="false">Опция 1</md-checkbox>
+        </md-list-item>
+        <md-list-item>
+            <md-checkbox [checked]="false">Опция 2</md-checkbox>
+        </md-list-item>
+    </md-list>
     <md-input placeholder="Предпочтения" [(ngModel)]="item"></md-input>
 </md-card-content>
 <md-card-actions align="end">

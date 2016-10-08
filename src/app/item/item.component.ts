@@ -15,7 +15,7 @@ import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
 
 export class ItemComponent implements OnInit {
     items: Array<Item>;
-    searchItem: string = '';
+    search: string = '';
     searchOpen: boolean = false;
     filterOpen: boolean = false;
     dialogRef: MdDialogRef<ItemDialogComponent>;
