@@ -4,6 +4,7 @@ import { SharedModule } from '../shared';
 
 import { trayRouting } from './tray.routing';
 import { TrayComponent } from './tray.component';
+import { TrayService } from './tray.service'
 
 @NgModule({
     declarations: [
@@ -13,6 +14,7 @@ import { TrayComponent } from './tray.component';
         trayRouting,
         SharedModule
     ],
+    providers: [TrayService],
     entryComponents: [
         TrayComponent
     ]
