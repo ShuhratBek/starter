@@ -3,6 +3,7 @@ import { NgModel } from '@angular/forms';
 import { ItemDialogComponent } from './item-dialog';
 import { Item } from './item';
 import { ItemService } from './item.service';
+import { TrayService } from '../tray/tray.service';
 import * as _ from 'lodash';
 import * as Rx from 'rxjs';
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
@@ -22,6 +23,7 @@ export class ItemComponent implements OnInit {
 
     constructor(
         private itemService: ItemService,
+        private trayService: TrayService,
         public dialog: MdDialog,
         public viewContainerRef: ViewContainerRef
     ) {
@@ -46,12 +48,14 @@ export class ItemComponent implements OnInit {
         this.filterOpen = !this.filterOpen;
     }
 
-    open() {
+    open(item: Item): void {
         let config = new MdDialogConfig();
         config.viewContainerRef = this.viewContainerRef;
 
         this.dialogRef = this.dialog.open(ItemDialogComponent, config);
 
-        this.dialogRef.afterClosed().subscribe(result => {});
+        this.dialogRef.afterClosed().subscribe(result => {
+            this.trayService.add(item);
+        });
     }
 }

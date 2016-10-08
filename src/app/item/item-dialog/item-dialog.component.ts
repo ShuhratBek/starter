@@ -7,10 +7,10 @@ import { MdDialogRef} from '@angular/material';
 })
 export class ItemDialogComponent {
     item: string;
-    
+
     constructor(public dialogRef: MdDialogRef<ItemDialogComponent>) {}
 
     save() {
-        this.dialogRef.close(this.item);
+        this.dialogRef.close();
     }
 }

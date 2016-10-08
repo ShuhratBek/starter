@@ -1,33 +1,23 @@
 import { Injectable } from '@angular/core';
 import { Item } from '../item/item';
 import { Tray } from './tray';
-import { TRAY } from './mock-tray';
+import { Trays } from './mock-tray';
+
+import * as _ from 'lodash';
 
 @Injectable()
 export class TrayService {
-    // data: Observable<Array<Dish>>;
-    // private dataObserver: Observer<Array<any>>;
-    //
-    constructor() {
+    constructor() {}
 
-        //     this.data = new Observable(observer => this.dataObserver = observer);
-        //     this.dataObserver.next(DISHES);
+    getItems(): Promise<Tray[]> {
+        return Promise.resolve(Trays);
     }
 
-    getTray(): Promise<Tray> {
-        return Promise.resolve(TRAY);
-    }
-
-    removeDish(dish: Item): boolean {
+    removeDish(item: Item): boolean {
         return false;
     }
 
-    // getCategory(id: number): Promise<Dish[]> {
-    //     return this.getDishes()
-    //         .then(dishes =>
-    //             _.find(dishes, _.flow(
-    //                 _.property('items'),
-    //                 _.partialRight(_.some, { id: id })
-    //             )));
-    // }
+    add(item: Item): void {
+        Trays[0].items.push(item);
+    }
 }

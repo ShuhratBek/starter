@@ -1,15 +1,15 @@
 <div layout="row" layout-align="center center">
-    <md-card flex="80" *ngIf="tray">
+    <md-card flex="80" *ngFor="let tray of trays">
         <md-toolbar md-card-image>
             <span>Заказ в {{ tray.company.name }}</span>
             <span flex></span>
         </md-toolbar>
         <md-nav-list md-card-image>
-            <md-list-item *ngFor="let dish of tray.dishes" (mouseover)="dish.hover=true" (mouseleave)="dish.hover=false">
-                <span flex="20">{{ dish.name }}</span>
-                <span flex="60">{{ dish.ingredients }}</span>
-                <span flex="10">{{ dish.price | number}} р.</span>
-                <button md-icon-button *ngIf="dish.hover">
+            <md-list-item *ngFor="let item of tray.items" #itemin (mouseover)="itemin.hover=true" (mouseleave)="itemin.hover=false">
+                <span flex="20">{{ item.name }}</span>
+                <span flex="60">{{ item.ingredients }}</span>
+                <span flex="10">{{ item.price | number}} р.</span>
+                <button md-icon-button *ngIf="item.hover">
                     <md-icon>delete</md-icon>
                 </button>
             </md-list-item>
@@ -19,7 +19,4 @@
             <span flex>Итого: {{ tray.totalPrice | number }} р.</span>
         </md-toolbar>
     </md-card>
-    <!--<button md-fab class="md-fab-bottom-right" (click)="open()" [disabled]="dialogRef">-->
-    <!--<md-icon>add</md-icon>-->
-    <!--</button>-->
 </div>

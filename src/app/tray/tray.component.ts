@@ -1,27 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { TrayService } from './tray.service'
-import { Tray } from './tray'
+import { TrayService } from './tray.service';
+import { Tray } from './tray';
 
 @Component({
     selector: 'tray',
     template: require('./tray.component.html')
 })
 
-export class TrayComponent {
-    tray: Tray;
+export class TrayComponent implements OnInit {
+    trays: Array<Tray>;
 
     constructor(
-        private trayService: TrayService,
+        private trayService: TrayService
     ) {
 
     }
 
-    getTray(): void {
-        this.trayService.getTray()
-            .then((tray: Tray) => this.tray = tray);
+    getItems(): void {
+        this.trayService.getItems()
+            .then(trays => this.trays = trays);
     }
 
     ngOnInit(): void {
-        this.getTray();
+        this.getItems();
     }
 }

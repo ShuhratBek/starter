@@ -8,8 +8,14 @@ export let CATEGORIES: Array<Category> = [
         items: []
     },
     {
-        id: 5,
+        id: 2,
         name: 'ПЕРВЫЕ БЛЮДА',
+        icon: '',
+        items: []
+    },
+    {
+        id: 3,
+        name: 'ВТОРЫЕ БЛЮДА',
         icon: '',
         items: []
     }

@@ -4,7 +4,7 @@ import { Company } from '../item/item'
 export class Tray {
     id: number;
     company: Company;
-    dishes: Array<Item>;
+    items: Array<Item>;
     status: string;
     totalPrice: number;
 }
