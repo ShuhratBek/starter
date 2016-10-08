@@ -11,6 +11,9 @@ import * as _ from 'lodash';
 
 export class ItemComponent implements OnInit {
     items: Array<Item>;
+    search: string = '';
+    searchOpen: boolean = false;
+    filterOpen: boolean = false;
     constructor(
         private itemService: ItemService
     ) {
@@ -22,5 +25,13 @@ export class ItemComponent implements OnInit {
 
     ngOnInit(): void {
         this.getItems();
+    }
+
+    toggleSearch(): void {
+        this.searchOpen = !this.searchOpen;
+    }
+
+    toggleFilter(): void {
+        this.filterOpen = !this.filterOpen;
     }
 }

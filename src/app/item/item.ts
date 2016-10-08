@@ -1,4 +1,9 @@
 import { Category } from '../category/category';
+export class Company {
+    id: number;
+    name: string;
+    image: string;
+}
 
 export class Item {
     id: number;
@@ -8,5 +13,6 @@ export class Item {
     description: string;
     options: string;
     category: Category;
-    company: string;
+    company: Company;
+    weight: number;
 }

@@ -6,9 +6,11 @@
         </md-toolbar>
         <md-nav-list md-card-image>
             <md-list-item *ngFor="let dish of dishes" (mouseover)="dish.hover=true" (mouseleave)="dish.hover=false">
-                <span flex>{{ dish.name }}</span>
-                <span flex>{{ dish.ingredients }}</span>
-                <span flex>{{ dish.price | number}} р.</span>
+                <span flex>
+                    <span>{{ dish.name }}</span>
+                    <span>{{ dish.ingredients }}</span>
+                    <span>{{ dish.price | number}} р.</span>
+                </span>
                 <button md-icon-button *ngIf="dish.hover">
                     <md-icon>delete</md-icon>
                 </button>

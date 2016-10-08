@@ -1,15 +1,37 @@
+<div layout="column" layout-padding>
+    <md-toolbar *ngIf="!searchOpen">
+        <span>Еда</span>
+        <span flex></span>
+        <button md-icon-button (click)="toggleFilter()">
+            <md-icon>filter_list</md-icon>
+        </button>
+        <button md-icon-button (click)="toggleSearch()">
+            <md-icon>search</md-icon>
+        </button>
+    </md-toolbar>
+    <md-toolbar *ngIf="searchOpen">
+        <md-input placeholder="Поиск" [(ngModel)]="search" flex></md-input>
+        <button md-icon-button (click)="toggleSearch()">
+            <md-icon>cancel</md-icon>
+        </button>
+    </md-toolbar>
+    <md-card *ngIf="filterOpen">
+        Filter
+    </md-card>
+</div>
 <div layout="row" layout-wrap>
     <div *ngFor="let item of items" flex="25" layout-padding>
         <md-card>
             <md-card-header>
-                <img md-card-avatar src="">
-                <md-card-title>Bravo</md-card-title>
+                <img md-card-avatar [src]="item.company.image">
+                <md-card-title>{{ item.company.name }}</md-card-title>
                 <md-card-subtitle>Header subtitle</md-card-subtitle>
             </md-card-header>
             <img md-card-image [src]="item.image" class="img">
             <md-card-subtitle>{{ item.category.name }}</md-card-subtitle>
             <md-card-title>{{ item.name }}</md-card-title>
             <md-card-content>
+                <span>{{ item.weight }}г</span>
                 <p>{{ item.description }}</p>
             </md-card-content>
             <md-card-actions>
