@@ -20,5 +20,10 @@ export const MENUS: Menu[] = [
         title: 'Пользователи',
         link: 'user',
         icon: ''
+    },
+    {
+        title: 'Администратор',
+        link: 'admin',
+        icon: ''
     }
 ];

@@ -13,6 +13,7 @@ import { AppService } from './app.service';
 import { routing, appRoutingProviders } from './app.routing';
 import { SharedModule } from './shared';
 import { CategoryModule } from './category';
+import { AdminModule } from './admin/admin.module';
 import { ItemModule } from './item';
 import { TrayModule } from './tray';
 import { UserComponent } from './user/user.component';
@@ -31,6 +32,7 @@ import { NavbarComponent } from './navbar';
         JsonpModule,
         routing,
         SharedModule,
+        AdminModule,
         CategoryModule,
         ItemModule,
         TrayModule
