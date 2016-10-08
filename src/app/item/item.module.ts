@@ -8,6 +8,8 @@ import { ItemService } from './item.service';
 import {SearchFilterPipe} from "./searchFilter";
 
 import { ItemDialogComponent } from './item-dialog';
+import {CategoryService} from "../category/category.service";
+import {CompanyService} from "./company.service";
 
 @NgModule({
     declarations: [
@@ -19,7 +21,11 @@ import { ItemDialogComponent } from './item-dialog';
         itemRouting,
         SharedModule
     ],
-    providers: [ItemService],
+    providers: [
+        ItemService,
+        CategoryService,
+        CompanyService
+    ],
     entryComponents: [
         ItemComponent,
         ItemDialogComponent
