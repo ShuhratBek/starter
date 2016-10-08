@@ -19,7 +19,8 @@ export let Items: Array<Item> = [
             name: 'Браво',
             image: 'https://pp.vk.me/c631217/v631217990/19fa7/dZrx7s5XInY.jpg'
         },
-        weight: 170
+        weight: 170,
+        favorite: false
     },
 
     {
@@ -40,7 +41,8 @@ export let Items: Array<Item> = [
             name: 'Браво',
             image: 'https://pp.vk.me/c631217/v631217990/19fa7/dZrx7s5XInY.jpg'
         },
-        weight: 170
+        weight: 170,
+        favorite: false
     },
 
     {
@@ -61,7 +63,8 @@ export let Items: Array<Item> = [
             name: 'Браво',
             image: 'https://pp.vk.me/c631217/v631217990/19fa7/dZrx7s5XInY.jpg'
         },
-        weight: 170
+        weight: 170,
+        favorite: false
     },
 
     {
@@ -82,7 +85,8 @@ export let Items: Array<Item> = [
             name: 'Браво',
             image: 'https://pp.vk.me/c631217/v631217990/19fa7/dZrx7s5XInY.jpg'
         },
-        weight: 170
+        weight: 170,
+        favorite: false
     },
 
     {
@@ -103,7 +107,8 @@ export let Items: Array<Item> = [
             name: 'Браво',
             image: 'https://pp.vk.me/c631217/v631217990/19fa7/dZrx7s5XInY.jpg'
         },
-        weight: 170
+        weight: 170,
+        favorite: false
     },
 
     {
@@ -124,6 +129,7 @@ export let Items: Array<Item> = [
             name: 'Браво',
             image: 'https://pp.vk.me/c631217/v631217990/19fa7/dZrx7s5XInY.jpg'
         },
-        weight: 170
+        weight: 170,
+        favorite: false
     }
 ];

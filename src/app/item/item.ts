@@ -15,4 +15,5 @@ export class Item {
     category: Category;
     company: Company;
     weight: number;
+    favorite: boolean;
 }
