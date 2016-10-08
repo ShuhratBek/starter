@@ -1,1 +1,21 @@
-Item
+<div layout="row" layout-wrap>
+    <div *ngFor="let item of items" flex="25" layout-padding>
+        <md-card>
+            <md-card-header>
+                <img md-card-avatar src="">
+                <md-card-title>Bravo</md-card-title>
+                <md-card-subtitle>Header subtitle</md-card-subtitle>
+            </md-card-header>
+            <img md-card-image [src]="item.image" class="img">
+            <md-card-subtitle>{{ item.category.name }}</md-card-subtitle>
+            <md-card-title>{{ item.name }}</md-card-title>
+            <md-card-content>
+                <p>{{ item.description }}</p>
+            </md-card-content>
+            <md-card-actions>
+                <button md-button>Заказать</button>
+                <button md-button>Like</button>
+            </md-card-actions>
+        </md-card>
+    </div>
+</div>

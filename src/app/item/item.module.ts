@@ -4,6 +4,7 @@ import { SharedModule } from '../shared';
 
 import { itemRouting } from './item.routing';
 import { ItemComponent } from './item.component';
+import { ItemService } from './item.service';
 
 @NgModule({
     declarations: [
@@ -13,6 +14,7 @@ import { ItemComponent } from './item.component';
         itemRouting,
         SharedModule
     ],
+    providers: [ItemService],
     entryComponents: [
         ItemComponent
     ]
