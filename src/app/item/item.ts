@@ -1,3 +1,5 @@
+import { Category } from '../category/category';
+
 export class Item {
     id: number;
     name: string;
@@ -5,6 +7,6 @@ export class Item {
     price: number;
     description: string;
     options: string;
-    category: string;
+    category: Category;
     company: string;
 }
