@@ -19,7 +19,7 @@ export class TrayService {
         //     return Rx.Observable.from(DISHES);
     }
 
-    removeDish(dish): boolean {
+    removeDish(dish: Dish): boolean {
         return false;
     }
 
