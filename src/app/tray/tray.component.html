@@ -1,11 +1,11 @@
 <div layout="row" layout-align="center center">
-    <md-card flex="80">
+    <md-card flex="80" *ngIf="tray">
         <md-toolbar md-card-image>
-            <span>Заказ</span>
+            <span>Заказ в {{ tray.company.name }}</span>
             <span flex></span>
         </md-toolbar>
         <md-nav-list md-card-image>
-            <md-list-item *ngFor="let dish of dishes" (mouseover)="dish.hover=true" (mouseleave)="dish.hover=false">
+            <md-list-item *ngFor="let dish of tray.dishes" (mouseover)="dish.hover=true" (mouseleave)="dish.hover=false">
                 <span flex>
                     <span>{{ dish.name }}</span>
                     <span>{{ dish.ingredients }}</span>
@@ -18,7 +18,7 @@
         </md-nav-list>
         <md-toolbar>
             <span flex="80"></span>
-            <span flex>Итого: {{ totalPrice }} р.</span>
+            <span flex>Итого: {{ tray.totalPrice }} р.</span>
         </md-toolbar>
     </md-card>
     <!--<button md-fab class="md-fab-bottom-right" (click)="open()" [disabled]="dialogRef">-->
