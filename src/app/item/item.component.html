@@ -19,8 +19,8 @@
         Filter
     </md-card>
 </div>
-<div layout="row" layout-wrap>
-    <div *ngFor="let item of items" flex="25" layout-padding>
+<div layout="row" layout-wrap *ngIf="items">
+    <div *ngFor="let item of items | searchFilter:search" flex="25" layout-padding>
         <md-card>
             <md-card-header>
                 <img md-card-avatar [src]="item.company.image">
